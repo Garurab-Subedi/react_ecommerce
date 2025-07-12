@@ -5,6 +5,7 @@ import Product from "./Pages/Product"
 import Cart from "./Pages/Cart"
 import Shop from "./Pages/shop"
 import LoginSignUp from "./Pages/LoginSignUp"
+import Footer from "./Components/Footer/Footer"
 function App() {
  
   return (
@@ -13,14 +14,15 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Shop/>}/>
-        <Route path="/mens" element={<ShopCategory  category="men"/> }/>
-        <Route path="/womens" element={<ShopCategory category="women"/>}/>
-        <Route path="/kids" element={<ShopCategory category="kid"/>}/>
+        <Route path="/mens" element={<ShopCategory  category="mens"/> }/>
+        <Route path="/womens" element={<ShopCategory category="womens"/>}/>
+        <Route path="/kids" element={<ShopCategory category="kids"/>}/>
         <Route path="/product" element={<Product/>}/>
         <Route path="/product/:productId" element={<Product/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/login" element={<LoginSignUp/>}/>
       </Routes>
+      <Footer />
       </BrowserRouter>
 
     </div>
